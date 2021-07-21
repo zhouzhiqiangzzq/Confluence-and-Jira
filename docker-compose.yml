@@ -8,6 +8,7 @@ services:
         - /data/atlassian-mysql:/var/lib/mysql
         environment: 
         - MYSQL_ROOT_PASSWORD=atlassian
+        - TZ="Asia/Shanghai"
         restart: always
     confluence:
         image: "aladdinding/confluence:7.9.3"
