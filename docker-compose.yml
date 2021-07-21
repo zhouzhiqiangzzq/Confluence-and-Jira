@@ -1,7 +1,7 @@
 version: "3"
 services:
     mysql:
-        image: "aladdinding/mysql:5.7"
+        image: "aladdinding/mysql:5.7.35"
         ports: 
         - "3306:3306"
         volumes: 
@@ -10,7 +10,7 @@ services:
         - MYSQL_ROOT_PASSWORD=atlassian
         restart: always
     confluence:
-        image: "aladdinding/confluence:7.4"
+        image: "aladdinding/confluence:7.9.3"
         ports: 
         - "8601:8090"
         volumes: 
@@ -21,7 +21,7 @@ services:
         - mysql
         restart: always
     jira:
-        image: "aladdinding/jira:8.8"
+        image: "aladdinding/jira:8.17.1"
         ports: 
         - "8600:8080"
         volumes: 
